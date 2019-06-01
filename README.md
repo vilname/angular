@@ -1,4 +1,4 @@
-backend на node.js, mongodb.
+<p>backend на node.js, mongodb</p>
 frontend на angular
 
 Посмотреть можно https://rocky-oasis-50335.herokuapp.com/
