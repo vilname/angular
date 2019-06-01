@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <div class="container">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav row">
+          <a class="nav-item nav-link"
+            routerLinkActive='active' 
+            routerLink=""
+            [routerLinkActiveOptions]="{exact:true}"
+          >
+            Главная
+          </a>
+          <a class="nav-item nav-link"
+            routerLinkActive='active' 
+            routerLink="/questions"
+          >
+            Список запросов
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,27 @@
+
+<div class="col-xs-8 col-xs-offset-2">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-inline">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="search"
+        name="search"
+        formControlName="search"
+        (focus)="inputFocus()"
+        #inputF
+      >
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Искать
+      </button>
+    </div>
+  </form>
+  <hr>
+    <app-result *ngIf="item.search" [item]="item"></app-result>
+</div>
+  
+
+

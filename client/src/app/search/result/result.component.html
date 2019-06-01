@@ -1,0 +1,24 @@
+<div class="list-group result" *ngIf="!loader">
+  <div class="main-title">
+    <a href="https://ru.wikipedia.org/wiki/{{resultItems.title}}">{{resultItems.title}}</a>
+  </div>
+  <div class="list-group-item" *ngFor="let item of resultItems.sections">
+    <div class="result__name" [ngClass]="{'result__section' : !item.depth}">{{item.title}}</div>
+    <div class="result__content">
+      <span *ngIf="item.images">
+        <span class="result__content-img" *ngFor="let imgData of item.images">
+          <img src="{{imgData.url | imgPipe}}" />
+          <div>{{imgData.caption}}</div>
+        </span>
+      </span>
+      <span class="result__text">
+        <span *ngFor="let text of item.paragraphs">
+            <p *ngIf="text.sentences.length">
+              <span *ngFor="let p of text.sentences">{{p.text}}</span>
+            </p>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+<app-loader *ngIf="loader"></app-loader>

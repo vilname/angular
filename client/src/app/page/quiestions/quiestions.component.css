@@ -1,0 +1,25 @@
+.questions__list{
+    display: flex;
+    width: 100%
+}
+.questions__name{
+    margin-right: 20px;
+}
+.questions__name:first-letter {
+    text-transform: uppercase;
+}
+.questions__index{
+    margin-right: 5px;
+}
+.questions_sort{
+    margin-bottom: 10px;
+}
+.questions__head{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.questions__sort-date{
+    display: flex;
+    align-items: center;
+}

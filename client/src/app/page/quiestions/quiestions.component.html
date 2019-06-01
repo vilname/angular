@@ -1,0 +1,25 @@
+<div class="row questions">
+  <div class="questions__head">
+    <span class="h2">Поиск по названию</span>
+    <span class="questions__sort-date">
+      <select #sortDate (change)="dateSort()">
+        <option value=true>Первые запросы</option>
+        <option value=false>Последние запросы</option>
+      </select>
+    </span>
+  </div>
+  <input type="text" class="form-control questions_sort" (input)="searchSort()" #search>
+  <div class="questions__list" *ngFor="let item of items; let idx = index">
+    <span class="questions__index">{{idx + 1}}.</span>
+    <span class="questions__name">{{item.name}}</span>
+    <span class="questions__date">{{item.date}}</span>
+  </div>
+</div>
+
+<div>
+  <div class="analytics-block pb3">
+    <h5>Количество запросов</h5>
+    <canvas #question></canvas>
+  </div>
+
+</div>
